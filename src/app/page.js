@@ -5,6 +5,8 @@ import TrafficCards from "@/components/servicesCards/TrafficCards";
 import ConsultancyCard from "@/components/servicesCards/ConsultancyCard";
 
 export default function Home() {
+  const cardBorderRadius = 'rounded-lg';
+
   return (
     <div className="flex flex-col bg-gray-200 h-full">
       <Navbar />
@@ -34,7 +36,7 @@ export default function Home() {
         </h1>
         <div className="w-full flex flex-col lg:flex-row items-center justify-center gap-7 lg:gap-12">
           <SitesCard />
-          <TrafficCards />
+          <TrafficCards /> 
           <ConsultancyCard />
         </div>
       </section>
@@ -42,34 +44,49 @@ export default function Home() {
         <h1 className="text-blue-950 text-xl lg:text-3xl 2xl:text-5xl font-bold text-center mb-6 w-full lg:flex lg:items start lg:pl-30">
           Sobre a IP Soluções Digitais
         </h1>
-        <div className="bg-white border-3 border-blue-400 rounded-lg flex flex-col lg:flex-row lg:gap-10 items-center justify-center py-10 px-6 w-11/12 md:w-3/4 xl:w-2/3 2xl:w-1/2 text-base md:text-lg xl:text-xl shadow-lg">
-          <div className="w-full flex items-center justify-center mb-8">
-            <img src="logo.png" className="size-50" />
-          </div>
-          <div className="flex flex-col">
-            <p className="text-gray-700 mb-4">
-              Na <strong>IP Soluções Digitais</strong>
-              , acreditamos que toda empresa deve ter uma presença online que
-              <strong className="text-gray-900"> gere resultados reais</strong>,
-              e não apenas custos.
-            </p>
+        <div 
+          className={`
+            ${cardBorderRadius} text-base md:text-lg xl:text-xl shadow-lg 
+            w-11/12 md:w-3/4 xl:w-2/3 2xl:w-1/2 
+            relative overflow-hidden p-1.5 animate-blue-border`
+          }
+        >
+          <div className={`card-content bg-white ${cardBorderRadius} flex flex-col lg:flex-row lg:gap-10 items-center justify-center py-10 px-6 w-full h-full relative z-10`}>
+            
+            <div className="w-full flex items-center justify-center mb-8">
+              <img src="logo.png" className="size-50" />
+            </div>
+            
+            <div className="flex flex-col">
+              <p className="text-gray-700 mb-4">
+                Na <strong>IP Soluções Digitais</strong>
+                , acreditamos que toda empresa deve ter uma presença online que
+                <strong className="text-gray-900"> gere resultados reais</strong>,
+                e não apenas custos.
+              </p>
 
-            <p className="text-gray-700 mb-4">
-              Entendemos sua frustração com o investimento digital sem retorno.
-              Nossa missão é ser o seu
-              <strong className="text-gray-900"> parceiro estratégico</strong> de
-              longo prazo. Nós traduzimos o complexo mundo digital em um
-              <strong className="text-gray-900"> plano de ação claro, objetivo e lucrativo</strong>
-              .
-            </p>
-
-            <p className="text-gray-700 mb-6">
-              Não entregamos apenas serviços, entregamos a <strong className="text-gray-900">visibilidade estratégica </strong>
-              necessária para que o seu negócio atraia clientes qualificados e
-              <strong className="text-gray-900"> escale o seu faturamento </strong>
-              de forma sustentável. Seu sucesso é nosso
-              <strong> único foco</strong>.
-            </p>
+              <p className="text-gray-700 mb-4">
+                Entendemos sua frustração com o investimento digital sem retorno.
+                Nossa missão é ser o seu
+                <strong className="text-gray-900"> parceiro estratégico</strong> de
+                longo prazo. Nós traduzimos o complexo mundo digital em um
+                <strong className="text-gray-900"> plano de ação claro, objetivo e lucrativo</strong>
+                .
+              </p>
+              <p className="text-gray-700 mb-6">
+                Não entregamos apenas serviços, entregamos a <strong className="text-gray-900">visibilidade estratégica </strong>
+                necessária para que o seu negócio atraia clientes qualificados e
+                <strong className="text-gray-900"> escale o seu faturamento </strong>
+                de forma sustentável. Seu sucesso é nosso
+                <strong> único foco</strong>.
+              </p>
+              <div className="mt-6 pt-4 border-t border-gray-100 flex flex-col items-center text-center lg:items-start lg:text-left">
+                  <p className="text-blue-950 text-lg font-bold mb-4">
+                      Pronto para acelerar seus resultados?
+                  </p>
+                  <BudgetButton>Fale com um Consultor Agora</BudgetButton>
+              </div>
+            </div>
           </div>
         </div>
       </section>

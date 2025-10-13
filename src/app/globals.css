@@ -3,3 +3,48 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Define a animação de rotação (mantida a mesma) */
+@keyframes border-rotate-blue {
+  to {
+    transform: rotate(1turn); 
+  }
+}
+
+.animate-blue-border {
+  position: relative;
+  overflow: hidden; 
+  padding: 3px;
+  background-color: #ffffff; 
+  border-radius: 0.5rem; 
+}
+
+.animate-blue-border::before {
+  content: "";
+  position: absolute;
+  top: -50%; 
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  
+  background: conic-gradient(
+    from 90deg, 
+    #1a3b8e 0%,       
+    #ffffff 20%,       
+    #1a3b8e 50%,       
+    #ffffff 70%,       
+    #1a3b8e 100%
+  );
+  
+  animation: border-rotate-blue 10s linear infinite;
+  z-index: 0; 
+}
+
+.animate-blue-border > .card-content {
+    position: relative; 
+    z-index: 1; 
+    background-color: #ffffff;
+    border-radius: 0.5rem; 
+    height: 100%; 
+    width: 100%; 
+} 
