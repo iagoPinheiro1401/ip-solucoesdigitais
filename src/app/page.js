@@ -7,14 +7,13 @@ import SitesCard from "@/components/servicesCards/SitesCard";
 import TrafficCards from "@/components/servicesCards/TrafficCards";
 import ConsultancyCard from "@/components/servicesCards/ConsultancyCard";
 
-
 const itemVariants = {
   hidden: { y: 50, opacity: 0 },
   visible: {
     y: 0,
     opacity: 1,
     transition: {
-      duration: 0.6, 
+      duration: 0.6,
       ease: "easeOut",
     },
   },
@@ -28,8 +27,19 @@ export default function Home() {
       variants={itemVariants}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, amount: 0.3 }} 
+      viewport={{ once: true, amount: 0.3 }}
       className={className}
+    >
+      {children}
+    </motion.div>
+  );
+
+  const AnimatedTimelineStep = ({ children }) => (
+    <motion.div
+      variants={itemVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.3 }}
     >
       {children}
     </motion.div>
@@ -65,7 +75,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-white py-11 xl:p-22 w-full flex flex-col items-center lg:items-start justify-center lg:justify-start gap-4 lg:gap-9">
+      <section className="py-11 xl:p-22 w-full flex flex-col items-center lg:items-start justify-center lg:justify-start gap-4 lg:gap-9">
         <h1 className="text-blue-950 text-xl lg:text-3xl 2xl:text-5xl font-bold text-center lg:pl-12">
           Nossos serviços
         </h1>
@@ -147,6 +157,59 @@ export default function Home() {
                 <BudgetButton>Fale com um Consultor Agora</BudgetButton>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+      <section className="relative overflow-hidden flex flex-col items-center justify-center w-full py-10 lg:py-20 bg-[#EE6C20]">
+        <div className="absolute top-[-50px] left-[-50px] w-96 h-96 bg-amber-200 rounded-full opacity-40 blur-3xl mix-blend-soft-light"></div>
+        <div className="absolute bottom-[-100px] right-[-100px] w-80 h-80 bg-white rounded-full opacity-30 blur-3xl mix-blend-soft-light"></div>
+        <div className="z-10 text-white text-3xl lg:text-6xl font-extrabold mb-12 lg:mb-16">
+          Como funciona?
+        </div>
+        <div className="z-10 w-11/12 max-w-4xl text-white">
+          <div className="relative border-l-4 border-dashed border-white/70 space-y-12 lg:space-y-20 pl-8 pr-4">
+            <AnimatedTimelineStep>
+              <div className="relative p-6 lg:p-10 bg-[#00000020] rounded-lg border border-white/30">
+                <div className="absolute top-0 left-[-28px] bg-white w-7 h-7 lg:w-9 lg:h-9 rounded-full flex items-center justify-center text-[#EE6C20] font-bold text-sm lg:text-lg shadow-md">
+                  1
+                </div>
+                <h3 className="text-xl lg:text-3xl font-bold mb-3">
+                  Diagnóstico
+                </h3>
+                <p className="text-sm lg:text-lg">
+                  Realizamos uma reunião de briefing para entender a empresa e
+                  definir as estratégias iniciais.
+                </p>
+              </div>
+            </AnimatedTimelineStep>
+            <AnimatedTimelineStep>
+              <div className="relative p-6 lg:p-10 bg-[#00000020] rounded-lg border border-white/30">
+                <div className="absolute top-0 left-[-28px] bg-white w-7 h-7 lg:w-9 lg:h-9 rounded-full flex items-center justify-center text-[#EE6C20] font-bold text-sm lg:text-lg shadow-md">
+                  2
+                </div>
+                <h3 className="text-xl lg:text-3xl font-bold mb-3">
+                  Otimização
+                </h3>
+                <p className="text-sm lg:text-lg">
+                  Monitoramos diariamente os anúncios e fazemos otimizações
+                  semanais e mensais para melhorar a performance.
+                </p>
+              </div>
+            </AnimatedTimelineStep>
+            <AnimatedTimelineStep>
+              <div className="relative p-6 lg:p-10 bg-[#00000020] rounded-lg border border-white/30">
+                <div className="absolute top-0 left-[-28px] bg-white w-7 h-7 lg:w-9 lg:h-9 rounded-full flex items-center justify-center text-[#EE6C20] font-bold text-sm lg:text-lg shadow-md">
+                  3
+                </div>
+                <h3 className="text-xl lg:text-3xl font-bold mb-3">
+                  Consultoria
+                </h3>
+                <p className="text-sm lg:text-lg">
+                  Entregamos relatórios mensais, disponibilizamos um dashboard e
+                  realizamos consultorias de alinhamento.
+                </p>
+              </div>
+            </AnimatedTimelineStep>
           </div>
         </div>
       </section>
