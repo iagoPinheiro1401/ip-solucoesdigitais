@@ -1,6 +1,6 @@
 "use client";
 
-import { LightbulbIcon } from "@phosphor-icons/react/dist/ssr";
+import { CodeIcon } from "@phosphor-icons/react/dist/ssr";
 
 export default function SitesCard() {
   const cardBorderRadius = 'rounded-lg'; 
@@ -11,13 +11,13 @@ export default function SitesCard() {
     >
       <div className={`card-content h-full w-full flex flex-col items-center justify-center lg:gap-10 p-4 ${cardBorderRadius} relative z-10`}>
           <div className="p-4 bg-gray-100 rounded-full flex items-center justify-center mb-4">
-            <LightbulbIcon size={50} color="#3f50d5" weight="bold" className="lg:size-20"/>
+            <CodeIcon size={40} color="#3f50d5" weight="bold" className="lg:size-20"/>
           </div>
           <div className="w-full pl-4 flex flex-col gap-3"> 
             <h1 className="text-lg lg:text-3xl font-bold text-left"> 
-              Estratégia Digital<br /> clara e otimizada
+              Landind Page<br /> com conversão máxima
             </h1>
-            <h3 className="lg:text-xl text-sm text-gray-400 text-left">Tenha um plano de ação completo e as ferramentas certas para vencer a concorrência e escalar seu negócio.</h3>
+            <h3 className="lg:text-xl text-sm text-gray-400 text-left">Transformamos visitantes em clientes, garantindo que seu serviço seja a primeira escolha</h3>
           </div>
       </div>
     </section>
