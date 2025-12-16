@@ -50,7 +50,11 @@ export default function Home() {
   return (
     <div className="flex flex-col bg-gray-200 h-full overflow-x-hidden">
       <Navbar />
-      <section className="flex flex-col lg:flex-row gap-2 w-full py-4 lg:py-20 lg:px-40 2xl:py-56 items-center justify-center bg-white">
+      
+      <section 
+        id="home" 
+        className="flex flex-col lg:flex-row gap-2 w-full py-4 lg:py-20 lg:px-40 2xl:py-56 items-center justify-center bg-white"
+      >
         <div className="w-full lg:hidden flex justify-center my-15">
           <img src="logo.png" className="size-32" />
         </div>
@@ -77,7 +81,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-11 xl:p-22 w-full flex flex-col items-center lg:items-start justify-center lg:justify-start gap-4 lg:gap-9">
+      <section 
+        id="servicos" 
+        className="py-11 xl:p-22 w-full flex flex-col items-center lg:items-start justify-center lg:justify-start gap-4 lg:gap-9"
+      >
         <h1 className="text-blue-950 text-xl lg:text-3xl 2xl:text-5xl font-bold text-center lg:pl-12">
           Nossos serviços
         </h1>
@@ -97,7 +104,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="flex flex-col items-center justify-center w-full gap-2 px-4 my-5">
+      <section 
+        id="sobre" 
+        className="flex flex-col items-center justify-center w-full gap-2 px-4 my-5"
+      >
         <h1 className="text-blue-950 text-xl lg:text-3xl 2xl:text-5xl font-bold text-center mb-6 w-full lg:flex lg:items start lg:pl-30">
           Sobre a IP Soluções Digitais
         </h1>
@@ -162,7 +172,11 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="relative overflow-hidden flex flex-col items-center justify-center w-full py-10 lg:py-20 bg-[#EE6C20]">
+      
+      <section 
+        id="processo" 
+        className="relative overflow-hidden flex flex-col items-center justify-center w-full py-10 lg:py-20 bg-[#EE6C20]"
+      >
         <div className="absolute top-[-50px] left-[-50px] w-96 h-96 bg-amber-200 rounded-full opacity-40 blur-3xl mix-blend-soft-light"></div>
         <div className="absolute bottom-[-100px] right-[-100px] w-80 h-80 bg-white rounded-full opacity-30 blur-3xl mix-blend-soft-light"></div>
         <div className="z-10 text-white text-3xl lg:text-6xl font-extrabold mb-12 lg:mb-16">
@@ -265,7 +279,11 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="bg-gray-100 w-full flex items-center justify-center py-12 px-4">
+      
+      <section 
+        id="faq" 
+        className="bg-gray-100 w-full flex items-center justify-center py-12 px-4"
+      >
         <div className="bg-[#EE6C20] flex items-center flex-col md:flex-row gap-8 md:gap-20 p-8 lg:p-12 rounded-xl shadow-2xl max-w-6xl w-full">
           <div className="flex-shrink-0 text-center md:text-left">
             <h3 className="text-white font-medium md:text-2xl opacity-80">
