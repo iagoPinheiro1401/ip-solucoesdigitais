@@ -6,6 +6,8 @@ import BudgetButton from "@/components/buttons/BudgetButton";
 import SitesCard from "@/components/servicesCards/SitesCard";
 import TrafficCards from "@/components/servicesCards/TrafficCards";
 import ConsultancyCard from "@/components/servicesCards/ConsultancyCard";
+import FAQItems from "@/components/FAQItems/FAQItems";
+import Footer from "@/components/footer/Footer";
 
 const itemVariants = {
   hidden: { y: 50, opacity: 0 },
@@ -164,7 +166,7 @@ export default function Home() {
         <div className="absolute top-[-50px] left-[-50px] w-96 h-96 bg-amber-200 rounded-full opacity-40 blur-3xl mix-blend-soft-light"></div>
         <div className="absolute bottom-[-100px] right-[-100px] w-80 h-80 bg-white rounded-full opacity-30 blur-3xl mix-blend-soft-light"></div>
         <div className="z-10 text-white text-3xl lg:text-6xl font-extrabold mb-12 lg:mb-16">
-          Como funciona?
+          Como Funciona?
         </div>
         <div className="z-10 w-11/12 max-w-4xl text-white">
           <div className="relative border-l-4 border-dashed border-white/70 space-y-12 lg:space-y-20 pl-8 pr-4">
@@ -174,45 +176,136 @@ export default function Home() {
                   1
                 </div>
                 <h3 className="text-xl lg:text-3xl font-bold mb-3">
-                  Diagnóstico
+                  Briefing Estratégico
                 </h3>
                 <p className="text-sm lg:text-lg">
-                  Realizamos uma reunião de briefing para entender a empresa e
-                  definir as estratégias iniciais.
+                  Realizamos uma imersão completa para entender profundamente
+                  seu{" "}
+                  <strong>
+                    negócio, público-alvo e objetivos de crescimento
+                  </strong>
+                  . Esta etapa garante que a solução digital seja perfeitamente
+                  alinhada à sua visão.
                 </p>
               </div>
             </AnimatedTimelineStep>
+
             <AnimatedTimelineStep>
               <div className="relative p-6 lg:p-10 bg-[#00000020] rounded-lg border border-white/30">
                 <div className="absolute top-0 left-[-28px] bg-white w-7 h-7 lg:w-9 lg:h-9 rounded-full flex items-center justify-center text-[#EE6C20] font-bold text-sm lg:text-lg shadow-md">
                   2
                 </div>
                 <h3 className="text-xl lg:text-3xl font-bold mb-3">
-                  Otimização
+                  Planejamento e Arquitetura
                 </h3>
                 <p className="text-sm lg:text-lg">
-                  Monitoramos diariamente os anúncios e fazemos otimizações
-                  semanais e mensais para melhorar a performance.
+                  Criamos a arquitetura completa, definindo o mapa de páginas e
+                  funcionalidades essenciais para{" "}
+                  <strong>
+                    aprimorar o processo de atração e conversão de vendas.
+                  </strong>
                 </p>
               </div>
             </AnimatedTimelineStep>
+
             <AnimatedTimelineStep>
               <div className="relative p-6 lg:p-10 bg-[#00000020] rounded-lg border border-white/30">
                 <div className="absolute top-0 left-[-28px] bg-white w-7 h-7 lg:w-9 lg:h-9 rounded-full flex items-center justify-center text-[#EE6C20] font-bold text-sm lg:text-lg shadow-md">
                   3
                 </div>
                 <h3 className="text-xl lg:text-3xl font-bold mb-3">
-                  Consultoria
+                  Design focado em Conversão (Vitrine)
                 </h3>
                 <p className="text-sm lg:text-lg">
-                  Entregamos relatórios mensais, disponibilizamos um dashboard e
-                  realizamos consultorias de alinhamento.
+                  Criação do layout e conteúdo com foco em{" "}
+                  <strong>
+                    experiência do usuário (UX), otimização para SEO e alta
+                    conversão
+                  </strong>{" "}
+                  Sua marca será apresentada como uma vitrine digital poderosa.
+                </p>
+              </div>
+            </AnimatedTimelineStep>
+
+            <AnimatedTimelineStep>
+              <div className="relative p-6 lg:p-10 bg-[#00000020] rounded-lg border border-white/30">
+                <div className="absolute top-0 left-[-28px] bg-white w-7 h-7 lg:w-9 lg:h-9 rounded-full flex items-center justify-center text-[#EE6C20] font-bold text-sm lg:text-lg shadow-md">
+                  4
+                </div>
+                <h3 className="text-xl lg:text-3xl font-bold mb-3">
+                  Desenvolvimento e Implementação
+                </h3>
+                <p className="text-sm lg:text-lg">
+                  Desenvolvimento técnico completo com as{" "}
+                  <strong>melhores práticas do mercado.</strong> Seu projeto
+                  ganha vida com estabilidade e alta performance.
+                </p>
+              </div>
+            </AnimatedTimelineStep>
+
+            <AnimatedTimelineStep>
+              <div className="relative p-6 lg:p-10 bg-[#00000020] rounded-lg border border-white/30">
+                <div className="absolute top-0 left-[-28px] bg-white w-7 h-7 lg:w-9 lg:h-9 rounded-full flex items-center justify-center text-[#EE6C20] font-bold text-sm lg:text-lg shadow-md">
+                  5
+                </div>
+                <h3 className="text-xl lg:text-3xl font-bold mb-3">
+                  Lançamento e Sucesso
+                </h3>
+                <p className="text-sm lg:text-lg">
+                  <strong>Pronto!</strong> Sua landing page está entregue e
+                  otimizada para
+                  <strong>
+                    {" "}
+                    transformar cliques em novos clientes e resultados reais
+                  </strong>
+                  para o seu negócio.
                 </p>
               </div>
             </AnimatedTimelineStep>
           </div>
         </div>
       </section>
+      <section className="bg-gray-100 w-full flex items-center justify-center py-12 px-4">
+        <div className="bg-[#EE6C20] flex items-center flex-col md:flex-row gap-8 md:gap-20 p-8 lg:p-12 rounded-xl shadow-2xl max-w-6xl w-full">
+          <div className="flex-shrink-0 text-center md:text-left">
+            <h3 className="text-white font-medium md:text-2xl opacity-80">
+              Respostas rápidas
+            </h3>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-white mb-6">
+              Perguntas Frequentes
+            </h2>
+            <a
+              href="https://wa.me/88981745976?text=Olá,%20gostaria%20de%20ter%20uma%20consultoria%20grátis"
+              className="inline-block px-8 py-3 bg-[#213360] text-white font-bold rounded-full text-lg shadow-lg transition duration-300 hover:bg-[#15203d] hover:shadow-xl"
+            >
+              Ter uma Consultoria Grátis
+            </a>
+          </div>
+          <div className="flex flex-col gap-3 w-full max-w-lg">
+            <FAQItems
+              question="O que é uma landing page e por que preciso de uma?"
+              response="Uma landing page é uma página única com foco total na conversão (captura de leads ou venda). Você precisa de uma para transformar seus cliques de anúncios em clientes de forma eficiente."
+            />
+            <FAQItems
+              question="Em quanto tempo meu projeto fica pronto?"
+              response="O prazo padrão de desenvolvimento e entrega varia entre 7 a 15 dias úteis, dependendo da complexidade do conteúdo e das suas aprovações."
+            />
+            <FAQItems
+              question="A IP Soluções Digitais oferece suporte após a entrega?"
+              response="Sim, oferecemos suporte técnico inicial e planos de manutenção para garantir que sua página esteja sempre online, rápida e segura."
+            />
+            <FAQItems
+              question="A IP Soluções Digitais gerencia Tráfego Pago?"
+              response="Sim, nossa equipe de especialistas pode gerenciar suas campanhas de anúncios (Google Ads, Facebook Ads, etc.) para garantir que sua landing page receba tráfego qualificado e converta mais."
+            />
+            <FAQItems
+              question="Qual o orçamento mínimo recomendado para começar com Tráfego Pago?"
+              response="O orçamento ideal depende dos seus objetivos e do seu nicho de mercado. Sugerimos uma análise inicial gratuita para definir uma estratégia e o investimento mais eficiente para o seu negócio."
+            />
+          </div>
+        </div>
+      </section>
+      <Footer />
     </div>
   );
 }
